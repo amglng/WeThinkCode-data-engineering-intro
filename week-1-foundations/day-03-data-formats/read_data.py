@@ -15,3 +15,10 @@ json_file = "sample.json"
 with open(json_file, "r") as f:
     # YOUR CODE HERE
     pass
+
+
+# ===== Challenge =====
+# After reading both files, try:
+# 1. Print the name of the oldest person
+# 2. Print the average age
+# 3. Add a new entry to the CSV data
