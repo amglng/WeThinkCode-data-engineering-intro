@@ -42,7 +42,7 @@ print(ages)
 # 2. Print the average age
 print(sum(ages)/ len(ages))
 # 3. Add a new entry to the CSV data
-new_person = {"id": "9", "name": "Lee", "age": 22}
+new_person = {"id": "4", "name": "Lee", "age": 22}
 
 with open(csv_file, "a", newline="") as f:
     fieldnames = ["id","name","age"]
