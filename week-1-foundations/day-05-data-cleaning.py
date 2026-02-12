@@ -8,8 +8,7 @@ with open(sample_csv) as f :
     for row in reader:
         rows.append(row)
 
-
-print("/nOriginal Rows:")
+print("Original Rows:")
 print(rows)
 print("-" * 200)
 
@@ -38,17 +37,31 @@ for row in cleaned_rows:
 print("After Removing Duplicates, Coverting age to Int and Capitalizing name:")
 print(unique_rows)
 print("-" * 200)
+print(len(unique_rows))
+#Batching from day 4:
+batch_size = 3
+batches = []
 
-# for row in unique_rows: #changing age into integers
-#     row["age"] = int(row["age"])
+# start = 0 → start at the first index
+# stop = len(unique_rows) → stop at the end of your dataset
+# step = batch_size → jump by 3 each time
 
-#Converting names into uppercase
-# row["name"] → gets the string
-# .strip() → removes extra spaces like " bob " → "bob"
-# .capitalize() → makes first letter uppercase → "Bob"
-# ***for row in unique_rows:
-#     row["name"] = row["name"].strip().capitalize()
+for i in range(0, len(unique_rows), batch_size):
+    batch = unique_rows[i:i + batch_size]
+    batches.append(batch)
 
-# print("After Converting Ages to Integers:")
-# print(unique_rows)
-# print("-" * 40)
+print(batches)
+
+
+for idx, batch in enumerate(batches):
+    print(f"Processing Batch {idx + 1}")
+
+    ages = [row["age"] for row in batch]
+
+    avg = sum(ages)/len(ages)
+    
+    count_over_30 = sum(1 for age in ages if age > 30)
+    
+    print("Average Age:", average_age)
+    print("People older than 30:", count_over_30)
+    print("-" * 40)
