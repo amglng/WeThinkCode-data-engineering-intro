@@ -1,6 +1,33 @@
 id,name,age
 1,Alice,28
 2,Bob,34
-3,Charlie,25
-4,Lee,26
+3,Charlie,
+4,David,30
+5,Eva,22
+6,Frank,45
+7,Grace,29
+8,Hannah,
+9,Ian,31
+10,Jack,27
+11,Kate,19
+12,Liam,40
+13,Mia,33
+14,Noah,38
+15,Olivia,26
+16,Peter,41
+17,Quinn,24
+18,Rachel,36
+19,Sam,28
+20,Tina,30
+21,Alice,28
+22, bob ,34
+23,,50
+24,Victor,not_available
+25,Wendy,29
+26,Xander,42
+27,Yara,25
+28,Zack,37
+29,Mia,33
+30,George,18
+
 
