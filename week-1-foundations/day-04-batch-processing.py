@@ -42,7 +42,8 @@ for idx, batch in enumerate(batches):
         ages.append(int(row["age"]))
 
     average_age = sum(ages) / len(ages)
-    count_over_30 = sum(1 for age in ages if age > 30)
+    count_over_30 = sum(1 for age in ages
+                         if age > 30)
 
     print("Average age:", average_age)
     print("People older than 30:", count_over_30)
